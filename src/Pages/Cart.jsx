@@ -47,7 +47,7 @@ const Cart = ({ cart, changeQuantity, removeItem }) =>
               <span className="cart__quantity">Quantity</span>
               <span className="cart__total">Total</span>
             </div>
-            {cart.length == 0 && (<div className="cart__empty">
+            {cart.length === 0 && (<div className="cart__empty">
               <img src={EmptyCart} alt="" className="cart__empty--img" />
               <h2>You don't have any books in your cart!</h2>
               <Link to="/books">
