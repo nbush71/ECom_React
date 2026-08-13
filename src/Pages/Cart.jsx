@@ -47,7 +47,7 @@ const Cart = ({ cart, changeQuantity, removeItem }) =>
               <span className="cart__quantity">Quantity</span>
               <span className="cart__total">Total</span>
             </div>
-            {cart.length == 0 && (<div className="cart__empty">
+            {cart.length === 0 && (<div className="cart__empty">
               <img src={EmptyCart} alt="" className="cart__empty--img" />
               <h2>You don't have any books in your cart!</h2>
               <Link to="/books">
@@ -65,8 +65,7 @@ const Cart = ({ cart, changeQuantity, removeItem }) =>
                     </div>
                   </div>
                   <div className="cart__quantity">
-                    <input type="number" min={0} max={99} className="cart__input" onChange={(event) => changeQuantity(book, Number(event.target.
-                      value))} defaultValue={book.quantity || 1} />
+                    <input type="number" min={0} max={99} className="cart__input" onChange={(event) => changeQuantity(book, Number(event.target.value))} defaultValue={book.quantity || 1} />
                   </div>
                   <div className="cart__total">
                     ${((book.salePrice || book.originalPrice) * (book.quantity || 1)).toFixed(2)}
