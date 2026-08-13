@@ -4,7 +4,7 @@ import Price from './ui/Price';
 import Ratings from './ui/Ratings';
 
 const Book = ({ book }) => {
-  const [img, setImg] = useState();
+  const [setImg] = useState();
 
   const mountedRef = useRef(true);
 
